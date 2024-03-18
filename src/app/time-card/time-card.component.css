@@ -1,0 +1,12 @@
+.time-card{
+    width: 250px;
+    height: 80px;
+    background-color: purple;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+}

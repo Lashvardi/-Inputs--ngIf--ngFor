@@ -1,0 +1,33 @@
+<div class="time-wrapper">
+  <div class="time-headline">
+    <h1>Time Dashboard</h1>
+  </div>
+
+  <div class="cards">
+    <!-- @Input ში მნიშვნელობის გასატანებლად -->
+    <!-- საჭიროა იქიდან გატანება სადაც კომპონენტს ვიძახე -->
+    <!-- directive-ბი -->
+    <!-- *ngIf -->
+    <!-- *ngFor -->
+    <!-- *ngClass -->
+    <!-- *ngStyle -->
+    <!-- *ngSwitch -->
+    <!-- *directive-ბის -->
+    <!-- მეშვეობით შეგვიძლია -->
+    <!-- კომპონენტს მისი ფუნქციონალი შევუცვალოთ -->
+    <!-- ngIf მუშაობს მხოლოდ მაშინ -->
+    <!-- როდესაც პირობა არი ჭეშმარიტი -->
+    <ng-container *ngIf="buses.length > 2; else sxvaRagac">
+        <app-time-card
+          *ngFor="let bus of buses"
+          [plate]="bus.plate"
+          [time]="bus.time"
+        ></app-time-card>
+    </ng-container>
+    
+    <ng-template #sxvaRagac>
+        <h1>არა საკმარისი ავტობუსების რაოდენობა</h1>
+    </ng-template>
+
+  </div>
+</div>
